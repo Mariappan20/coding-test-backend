@@ -5,7 +5,6 @@ const router = express.Router();
 const Users = require('../models/users');
 
 router.get('', (req, res) => {
-	console.log(`get request`);
 	res.json('get request success');
 });
 
