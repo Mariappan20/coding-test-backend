@@ -12,12 +12,12 @@ router.post('/signup', (req, res) => {
 	console.log(req.body);
 	let email = req.body.email;
 	let password = req.body.password;
+	let dob = req.body.password;
+	let address = req.body.address;
+	let phoneNumber = req.body.phoneNumber;
 	
-	if(!email|| !password ) {
-		res.status(422).json({"error":"please fill all the fields"});
-	}
 	
-	else {
+	
 		Users.findOne({email: email})
 		.then(  existingUser  => {
 			
@@ -51,7 +51,7 @@ router.post('/signup', (req, res) => {
 		.catch( err => {
 		   console.log(err);
 	  } )
-	}
+	
 });
 
 
