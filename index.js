@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const auth = require('./routes/auth');
 const app = express();
 const port = 7000;
-const url = "mongodb://localhost/";
+const url = "mongodb://localhost/testApp";
 
 app.use(express.json());
 app.use(auth);
